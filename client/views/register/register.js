@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('mean-template')
+  angular.module('dirdemo')
   .controller('RegisterCtrl', ['$scope', '$location', 'User', function($scope, $location, User){
     $scope.user = {};
 

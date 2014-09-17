@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('mean-template', ['ngRoute', 'LocalForageModule'])
+  angular.module('dirdemo', ['ngRoute', 'LocalForageModule', 'abGreetingModule'])
   .config(['$routeProvider', '$httpProvider', '$localForageProvider', function($routeProvider, $httpProvider, $localForageProvider){
     $routeProvider
     .when('/', {templateUrl:'/views/home/home.html', controller:'HomeCtrl'})

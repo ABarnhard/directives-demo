@@ -1,7 +1,6 @@
-## name of project
+## Directives Demo
 ### Code Badges
-build status icon
-coverage status icon
+Badges? We Don't need no stinking badges...
 
 ### Screenshots
 ![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/one.jpg)
@@ -40,7 +39,7 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [Adam Barnhard](https://github.com/abarnhard)
 
 ### License
 [MIT](LICENSE)
