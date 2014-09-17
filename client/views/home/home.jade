@@ -1,4 +1,9 @@
 h5 {{title}}
-div(ab-greeting, name='Bob', age='25')
-div(ab-greeting, name='John', age='22')
-div(ab-greeting, name='Baxter', age='15')
+div(ab-greeting, ng-repeat='person in people', name='{{person.name}}', age='{{person.age}}')
+.row
+div(ab-clock, frequency='1000')
+.row
+div(ab-stock, ng-repeat='symbol in symbols', symbol='{{symbol}}')
+
+
+
