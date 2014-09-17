@@ -1,0 +1,11 @@
+.panel.panel-default
+  .panel-body
+    h3 {{movieTitle}}
+    .poster(ng-style="{'background-image': 'url({{posterUrl}})'}")
+    img(ng-src='{{posterUrl}}')
+    p Released: {{release}}
+    p {{rating}}
+    p {{length}} mins
+    h6 Cast:
+    ul
+      li(ng-repeat='actor in actors') {{actor}}
