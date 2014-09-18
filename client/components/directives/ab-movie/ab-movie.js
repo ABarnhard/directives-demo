@@ -22,18 +22,18 @@
 
     o.restrict    = 'A';
     o.templateUrl = '/components/directives/ab-movie/ab-movie.html';
-    o.scope       = {title:'@'};
+    o.scope       = {title:'@', remove:'&'};
     o.link        = function(scope, element, attrs){
                     };
     o.controller  = ['$scope', 'MovieApi', function($scope, MovieApi){
                       MovieApi.getMovieId($scope.title).then(MovieApi.movieInfo).then(function(res){
-                        console.log(res.data);
+                        // console.log(res.data);
                         $scope.movieTitle = res.data.title;
                         $scope.posterUrl = res.data.posters.detailed.replace('_tmb', '_det');
                         $scope.release = res.data.release_dates.theater;
                         $scope.rating = res.data.mpaa_rating;
                         $scope.length = res.data.runtime;
-                        $scope.actors = res.data.abridged_cast.map(function(a){return a.name});
+                        $scope.actors = res.data.abridged_cast.map(function(a){return a.name;});
                       });
                     }];
     return o;

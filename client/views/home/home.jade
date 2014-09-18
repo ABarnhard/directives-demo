@@ -1,12 +1,21 @@
-h5 {{title}}
-div(ab-greeting, ng-repeat='person in people', name='{{person.name}}', age='{{person.age}}')
+h5 {{pageTitle}}
 .row
-div(ab-clock, frequency='1000')
+  div(ab-locate)
 .row
-div(ab-stock, ng-repeat='symbol in symbols', symbol='{{symbol}}')
+  div(ab-weather)
+  div(ab-weather, zip='37204')
+  div(ab-weather, zip='80110')
 .row
-div(ab-weather, zip='37204')
-div(ab-weather, zip='80110')
+  div(ab-greeting, ng-repeat='person in people', name='{{person.name}}', age='{{person.age}}')
 .row
-div(ab-movie, title='The Hobbit')
-
+  div(ab-clock, frequency='1000')
+.row
+  //- div(ab-stock, ng-repeat='symbol in symbols', symbol='{{symbol}}')
+.row
+  .col-xs-4
+  .col-xs-4
+    input.form-control(type='text', name='title', ng-model='title')
+    button.btn.btn-danger(type='button', ng-click='addMovie()') Add Movie
+  .col-xs-4
+.row
+  div(ab-movie, ng-repeat='movie in movies', title='{{movie.title}}', remove='deleteMovie($index)')
